@@ -1,0 +1,67 @@
+body {
+  background: rgb(28, 27, 34);
+  color: whitesmoke;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+.opponentPicking {
+  display: grid;
+  justify-items: center;
+}
+.oponentbtn {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px;
+}
+.hide {
+  display: none;
+}
+.alert {
+  border: 2px solid red;
+}
+.playersNames {
+  display: none;
+  gap: 25px;
+}
+form.active {
+  display: grid;
+  gap: 25px;
+  grid-template-columns: 154px 155px;
+}
+input:invalid {
+  border: 1px solid red;
+}
+.error {
+  width: 100%;
+  padding: 0;
+  font-size: 80%;
+  color: white;
+  background-color: #900;
+  border-radius: 0 0 5px 5px;
+  box-sizing: border-box;
+  position: relative;
+  left: 91px;
+}
+.gameboard {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.gameboard > div {
+  display: none;
+  width: 111px;
+  height: 111px;
+  border: 1px solid blue;
+  padding: 0;
+  justify-content: center;
+  align-content: center;
+  font-size: 4em;
+}
+.scoore {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  gap: 24px;
+}

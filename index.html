@@ -4,9 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="JS.js" defer></script>
     <title>Tic Tac Toe</title>
 </head>
 <body>
     
+<div class="opponentPicking">
+<h1>Pick your opponent</h1>  
+<div class="oponentbtn">
+<button >Computer</button> 
+<button>Friend</button>  
+</div>
+</div>
+
+<div class="playersNames">
+<form>
+    <div>
+    <label for="fPlayer">First Player Name:</label>
+    <input type="text" id="fPlayer" name="fPlayer" required>
+    <span class='error' aria-live="polite"></span>
+</div>
+<div>
+    <label for="sPlayer">Second Player Name:</label>
+    <input type="text" id="sPlayer" name="sPlayer" required>
+    <span class='error' aria-live="polite"></span>
+</div>
+</form>
+<button class="play">play</button>
+</div>
+<div class="scoore">
+    <p id="pA"></p>
+    <p id="pB"></p>
+</div>
+<div class="gameboard">
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</div>
+
 </body>
 </html>
