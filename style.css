@@ -65,3 +65,13 @@ input:invalid {
   justify-content: space-between;
   gap: 24px;
 }
+.winner {
+  position: absolute;
+  top: 5%;
+  left: 41%;
+  color: #900;
+}
+.restart {
+  display: none;
+  justify-self: center;
+}

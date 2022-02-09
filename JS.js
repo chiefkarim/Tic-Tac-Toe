@@ -45,6 +45,15 @@ let opponentPicking = function () {
             gameBoard.forEach((item) => (item.style.display = "grid"));
             document.querySelector("#pA").textContent = players.xPlayer + "(x)";
             document.querySelector("#pB").textContent = players.oPlayer + "(o)";
+            const restart = document.querySelector(".restart");
+            restart.style.display = "block";
+            restart.addEventListener("click", function () {
+              players.oPlacment = [];
+              players.xPlacment = [];
+              gameBoard.forEach((item) => (item.innerText = ""));
+              const announcment = document.querySelector(".winner");
+              announcment.remove();
+            });
             playrules();
           }
         });
@@ -99,12 +108,27 @@ const checkWinner = function () {
       items.every((item) => players.xPlacment.includes(item))
     ).length != 0
   ) {
-    console.log("the winner is" + players.xPlayer);
+    const winnerAnouncment = document.createElement("h1");
+    const body = document.querySelector("body");
+    winnerAnouncment.innerText = "the winner is" + ": " + players.xPlayer;
+    winnerAnouncment.classList.add("winner");
+    body.append(winnerAnouncment);
   } else if (
     winConditions.filter((items) =>
       items.every((item) => players.oPlacment.includes(item))
     ).length != 0
   ) {
-    console.log("the winner is " + players.oPlayer);
+    const winnerAnouncment = document.createElement("h1");
+    const body = document.querySelector("body");
+    winnerAnouncment.classList.add("winner");
+    winnerAnouncment.innerText = "the winner is" + ": " + players.oPlayer;
+    body.append(winnerAnouncment);
+  } else if (players.oPlacment.length > 4 || players.oPlacment.length > 4) {
+    const winnerAnouncment = document.createElement("h1");
+    const body = document.querySelector("body");
+    winnerAnouncment.classList.add("winner");
+    winnerAnouncment.innerText = "it's a tie";
+    body.append(winnerAnouncment);
+  } else if (document.querySelector("winner")) {
   }
 };
